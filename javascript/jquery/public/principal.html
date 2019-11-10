@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Alura Typer</title>
+    <link rel="stylesheet" type="text/css" href="css/libs/materialize/css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="css/libs/google-fonts.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/libs/selectize.default.css">
+    <link rel="stylesheet" type="text/css" href="css/libs/tooltipster.bundle.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+	<div class="container">
+	    <h1 class="center">Alura Typer</h1>
+	    <p class="frase center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing.</p>
+
+	    <div class="center">
+	    	
+	    	<img id="spinner" src="img/spinner.gif" alt="spinner">
+	    	<p id="erro">Ocorreu um erro, tente novamente.</p>
+
+	    </div>
+
+	    <ul class="informacoes center">
+
+	    	<li>
+	    		<i class="small material-icons icones">description</i>
+
+	    		<span id="tamanho-frase">0</span> palavras
+	    	</li>
+	        <li>
+	        	<i class="small material-icons icones">query_builder</i>
+	        	<span id="tempo-digitacao">5</span> segundos
+	        </li>
+
+	    </ul>
+
+	    <textarea class="campo-digitacao" rows="8" cols="40"></textarea>
+		<!-- <button id="botao-reset">Reiniciar Jogo</button> -->
+		
+		<div class="botoes">
+  		
+  			<a id="botao-reset" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">restore</i></a>
+  			<a id="botao-placar" class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">assignment</i></a>
+  			<a id="botao-frase" class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">shuffle</i></a>
+  			<a id="botao-id" class="btn-floating btn-large waves-effect waves-light cyan"><i class="material-icons">repeat_one</i></a>
+  			<input type="number" id="frase-id" min="0" max="9" pattern="\d[0-9]" value="0">
+  			<div class="select-usuarios">
+  				<select id="usuarios">
+  					<option value="Anônimo">Anônimo</option>
+  				</select>
+  			</div>
+  			<a id="botao-sinc" class="btn-floating btn-large waves-effect waves-light right yellow tooltip" title="Sincronizado com sucesso"><i class="material-icons">swap_vert</i></a>
+
+        
+        </div>
+
+	    <ul class="center">
+
+	        <li><span id="qtCaracteres">0</span> caracteres</li>
+	        <li><span id="qtPalavras">0</span> palavras</li>
+
+
+	    </ul>
+
+	    <section class="placar">
+	    	
+			<h3 class="center">Placar</h3>
+		    <table class="centered bordered highlight">
+		        <thead>
+		            <tr>
+		                <th>Usuário</th>
+		                <th>No. de palavras</th>
+		                <th>Remover</th>
+		            </tr>
+		        </thead>
+		        <tbody>
+		            
+		        </tbody>
+		    </table>
+
+	    </section>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="css/libs/materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/selectize.js"></script>
+    <script type="text/javascript" src="js/tooltipster.bundle.js"></script>
+    <script type="text/javascript" src="js/main.js" ></script>
+    <script type="text/javascript" src="js/placar.js" ></script>
+    <script type="text/javascript" src="js/frase.js" ></script>
+    <script type="text/javascript" src="js/usuario.js" ></script>
+</body>
+</html>

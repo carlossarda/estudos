@@ -1,0 +1,8 @@
+Ativar hyper-v
+bcdedit /set hypervisorlaunchtype auto
+reboot
+
+Desativar hyper-v
+bcdedit /set hypervisorlaunchtype off
+reboot
+

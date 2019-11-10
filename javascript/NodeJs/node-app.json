@@ -1,0 +1,17 @@
+{
+  "apps" : [{
+    "name"        : "payfast",
+    "script"      : "cluster.js",
+    "cwd"         : "./payfast\/",
+    "watch"       : true,
+    "ignore_watch" : ["node_modules", "files", "logs", "util"],
+    "max_restarts" : 3
+  },{
+  "name"        : "cardfast",
+  "script"      : "index.js",
+  "cwd"         : "./cardfast\/",
+  "watch"       : true,
+  "ignore_watch" : ["node_modules"],
+  "max_restarts" : 3
+  }]
+}

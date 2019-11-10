@@ -1,0 +1,6 @@
+curl http://localhost:3000/pagamentos/pagamento -X POST -v -H "Content-type: application/json" -d "{ \"forma_de_pagamento\": \"payfast\", \"valor\": \"10.87\", \"moeda\": \"BRL\",\"descricao\": \"descrição do pagamento\" }" | jsonpp
+
+
+curl http://localhost:3000/pagamentos/pagamento -X POST -v -H "Content-type: application/json" -d @pagamento.json | jsonpp
+
+curl http://localhost:3000/upload/imagem -X POST --data-binary @files\universo.jpg -H "Content-type: application/octet-stream" -v -H "filename: imagem.jpg"

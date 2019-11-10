@@ -1,0 +1,24 @@
+{
+  "name": "teste2",
+  "version": "1.0.0",
+  "description": "outra tentativa",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "git"
+  ],
+  "author": "carlos",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.5",
+    "angular-resource": "^1.7.5",
+    "angular-route": "^1.7.5",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.1.3",
+    "express": "^4.16.4",
+    "jquery": "^3.3.1"
+  }
+}

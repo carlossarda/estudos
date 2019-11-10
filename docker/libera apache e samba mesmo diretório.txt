@@ -1,0 +1,23 @@
+// libera apache
+
+ chcon -R --type=httpd_sys_rw_content_t /var/www/html/projetos/
+
+
+// libera samba
+
+chcon -t samba_share_t anonymous/
+
+
+
+/// libera ambos
+
+[root@centos www]# setsebool -P samba_export_all_rw 1
+
+[root@centos www]#
+[root@centos www]#
+[root@centos www]#
+[root@centos www]# chcon -t public_content_rw_t /var/www
+[root@centos www]# setsebool -P allow_smbd_anon_write 1
+[root@centos www]# setsebool -P allow_httpd_anon_write 1
+[root@centos www]# chcon -R -t public_content_rw_t /var/www
+[root@centos www]# ls

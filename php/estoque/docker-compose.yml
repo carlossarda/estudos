@@ -1,0 +1,80 @@
+version: '3'
+services:
+#  ngnix_laravel:
+#    build:
+#      dockerfile: ./docker/nginx.dockerfile
+#      context: .
+#    image: ngnix:latest
+#    container_name: ngnix_laravel
+#    ports:
+#      - "80:80"
+#    volumes:
+#        - .:/var/www/public
+#        - ./docker/config:/etc/nginx/conf.d/
+#    networks:
+#      - production-network
+#    depends_on:
+#      - "php"
+#  php:
+#    image: php:7-fpm
+#    container_name: php
+#    volumes:
+#        - .:/var/www/public
+#    networks:
+#      - production-network
+#  db:
+#    image: mariadb
+#    restart: always
+#    environment:
+#      MYSQL_ROOT_PASSWORD: example
+#  adminer:
+#    image: adminer
+#    restart: always
+#    ports:
+#      - 8080:8080
+#networks:
+#  production-network:
+#    driver: bridge
+  app:
+    build:
+      context: ./
+      dockerfile: app.dockerfile
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+    environment:
+      - "DB_PORT=3306"
+      - "DB_HOST=estoque_laravel"
+    networks:
+      - production-network
+    depends_on:
+      - "database"
+  web:
+    build:
+      context: ./
+      dockerfile: web.dockerfile
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+    ports:
+      - 80:80
+    networks:
+      - production-network
+    depends_on:
+      - "app"
+  database:
+    image: mysql:5.6
+    volumes:
+      - ./dbdata:/var/lib/mysql
+    environment:
+      - "MYSQL_DATABASE=estoque_laravel"
+      - "MYSQL_USER=csarda"
+      - "MYSQL_PASSWORD=sarda88"
+      - "MYSQL_ROOT_PASSWORD=sarda88"
+    networks:
+      - production-network
+    ports:
+      - "3306:3306"
+networks:
+  production-network:
+    driver: bridge

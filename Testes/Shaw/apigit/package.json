@@ -1,0 +1,34 @@
+{
+  "name": "apigit",
+  "version": "1.0.0",
+  "description": "teste shaw",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
+  },
+  "keywords": [
+    "api",
+    "git",
+    "test"
+  ],
+  "author": "carlossarda",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.5",
+    "angular-resource": "^1.7.5",
+    "angular-route": "^1.7.5",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.1.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-load": "^1.1.16",
+    "jquery": "^3.3.1",
+    "nodemon": "^1.18.6",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "supertest": "^3.3.0"
+  }
+}
