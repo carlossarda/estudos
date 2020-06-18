@@ -13,7 +13,7 @@
   "author": "carlos",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.7.5",
+    "angular": "^1.8.0",
     "angular-resource": "^1.7.5",
     "angular-route": "^1.7.5",
     "body-parser": "^1.18.3",
